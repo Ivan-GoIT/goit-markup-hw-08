@@ -535,7 +535,7 @@ body {
   .hero {
     min-height: 600px;
     max-width: 1600px;
-    padding: 200px 0;
+    margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../../image/desktop/hero/heroImg_1200.jpg), linear-gradient(#c4c4c4, #c4c4c4);
   }
 }
@@ -855,20 +855,29 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  transform: translate(-50%, -50%);
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  animation: modal-animate-open 2000ms linear;
 }
 .backdrop.is-hidden > .modal {
   animation-name: none;
 }
 
-.close-modal-button {
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: calc(100% - 30px);
+    max-width: 450px;
+  }
+}
+.modal-close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -884,7 +893,7 @@ body {
   cursor: pointer;
   transform: fill var(--transition-duration-and-funk);
 }
-.close-modal-button :focus, .close-modal-button :hover {
+.modal-close-button :focus, .modal-close-button :hover {
   fill: var(--accent-color);
 }
 
@@ -908,25 +917,34 @@ body {
     transform: translate(-50%, -50%) scale(1);
   }
 }
-.modal > .title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
   margin-bottom: 12px;
   color: var(--title-color);
 }
-
+@media screen and (max-width: 1199px) {
+  .modal__title {
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
 .modal > .service-order-form {
   display: flex;
   flex-direction: column;
 }
 
-.form-field {
+.service-order-form__field {
   margin-bottom: 10px;
 }
 
-.field-description {
+.service-order-form__description {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -934,7 +952,7 @@ body {
   margin-bottom: 4px;
 }
 
-.field-input {
+.service-order-form__input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -951,7 +969,7 @@ body {
   position: relative;
 }
 
-.form-field > .input-wrapper .input-icon {
+.service-order-form__field > .input-wrapper .input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -962,11 +980,10 @@ body {
   transition: fill var(--transition-duration-and-funk);
 }
 
-.field-input:focus {
+.service-order-form__input:focus {
   border-color: var(--accent-color);
 }
-
-.field-input:focus + span > .input-icon {
+.service-order-form__input:focus + span > .input-icon {
   fill: var(--accent-color);
 }
 
@@ -1002,6 +1019,18 @@ body {
   line-height: 1.71;
   cursor: pointer;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .check-deskription {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .check-deskription {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .terms_of_agreement-link {

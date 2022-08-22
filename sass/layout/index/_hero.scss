@@ -42,7 +42,7 @@
   .hero {
     min-height: 600px;
     max-width: 1600px;
-    padding: 200px 0;
+    margin: 0 auto;
 
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
@@ -68,7 +68,7 @@
       url(../../../image/tablet/hero/heroImg_768.jpg),
       linear-gradient(#c4c4c4, #c4c4c4);
 
-    @include bg_image_for_2x('../../../image/tablet/hero/heroImg_768@2x.jpg');
+    @include bg_image_for_2x("../../../image/tablet/hero/heroImg_768@2x.jpg");
   }
 }
 
@@ -88,4 +88,3 @@
     @include bg_image_for_2x("../../../image/mobile/hero/heroImg_480@2x.jpg");
   }
 }
-
