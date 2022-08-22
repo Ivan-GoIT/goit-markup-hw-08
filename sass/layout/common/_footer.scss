@@ -1,0 +1,88 @@
+.footer {
+  padding: 60px 0;
+  background-color: #2f303a;
+  color: var(--primary-white-color);
+  & > .container {
+    display: flex;
+    & > div:first-child {
+      margin-right: 70px;
+    }
+  }
+  &-logo {
+    color: inherit;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+
+  font-style: normal;
+  line-height: 1.71;
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__contact {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.social-links-position {
+  margin-right: 93px;
+}
+
+.social-link-list__item.social-link-list__item_futer-colors {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-white-color);
+}
+
+/*Futer Mailing form */
+
+.mailing-form {
+  display: flex;
+
+  &__input {
+    min-width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--primary-white-color);
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__submit-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  &__submit-icon {
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+    fill: var(--primary-white-color);
+  }
+}

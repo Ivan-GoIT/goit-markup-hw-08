@@ -1,0 +1,32 @@
+
+.logo {
+  display: block;
+  font-family: "Raleway", sans-serif;
+   font-weight: 700;
+   
+
+  &_color {
+    color: var(--accent-color);
+  }
+}
+@media screen and (max-width:1199px) {
+  .logo{
+    font-size: 24px;
+    line-height: calc(28px/24px);
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .logo{
+    padding: 26px 0;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .logo{
+    font-size: 26px;
+    line-height: calc(31px/26px);
+    padding: 24px 0 25px;
+  }
+}

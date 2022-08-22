@@ -1,0 +1,130 @@
+.modal > .title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  margin-bottom: 12px;
+  color: var(--title-color);
+}
+
+.modal > .service-order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.field-description {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  display: block;
+  margin-bottom: 4px;
+}
+
+.field-input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+
+  color: var(--title-color);
+  font-size: 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color var(--transition-duration-and-funk);
+}
+.input-wrapper {
+  display: block;
+  position: relative;
+}
+
+.form-field > .input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  transition: fill var(--transition-duration-and-funk);
+}
+
+.field-input:focus {
+  border-color: var(--accent-color);
+}
+
+.field-input:focus + span > .input-icon {
+  fill: var(--accent-color);
+}
+
+.field-message {
+  height: 120px;
+  width: 100%;
+  padding: 10px 16px;
+  resize: none;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  color: var(--title-color);
+  font-size: 16px;
+
+  transition: border-color var(--transition-duration-and-funk);
+}
+
+.field-message::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.field-message:focus {
+  border-color: var(--accent-color);
+}
+
+.check-deskription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.terms_of_agreement-link {
+  color: var(--accent-color);
+}
+
+.check-deskription::before {
+  display: block;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+
+  content: "";
+  background-image: url("../image/svg/checkbox/not_checked.svg");
+  background-repeat: no-repeat;
+}
+
+.form-check:checked + .check-deskription::before {
+  background-image: url("../image/svg/checkbox/checked.svg");
+}
+
+.service-order-form > .button {
+  align-self: center;
+  min-width: 200px;
+}

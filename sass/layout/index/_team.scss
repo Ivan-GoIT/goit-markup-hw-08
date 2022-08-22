@@ -1,0 +1,87 @@
+@import "../../base/mixins";
+
+.team {
+  padding-top: 94px;
+  background: #f5f4fa;
+}
+
+.team-list {
+  @include list-wrapper(var(--standard-clearance));
+
+  &__item {
+    @include items_in_row_for_flex(
+      4,
+      var(--standard-clearance),
+      var(--standard-clearance)
+    );
+  }
+
+  &__card {
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__description {
+    padding: 30px 0;
+    background-color: var(--primary-white-color);
+  }
+
+  &__title {
+    color: var(--title-color);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__speshiality {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &_social-links-position {
+    margin: 16px 32px 0;
+  }
+}
+
+.social-link-list {
+  display: flex;
+  margin-right: -10px;
+
+  &__icon {
+    margin: 12px;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --diametr: 44px;
+
+    border-radius: 50%;
+    width: var(--diametr);
+    height: var(--diametr);
+    margin-right: 10px;
+
+    fill: var(--primary-svg-color);
+    transition: background-color var(--transition-duration-and-funk),
+      fill var(--transition-duration-and-funk);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      fill: var(--primary-white-color);
+    }
+  }
+}

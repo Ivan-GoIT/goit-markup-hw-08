@@ -1,0 +1,91 @@
+@import "../../base/mixins";
+
+.section.hero {
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 480px;
+  height: 400px;
+  text-align: center;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../../image/mobile/heroImg_480.jpg),
+    linear-gradient(#c4c4c4, #c4c4c4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: var(--standard-clearance);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--primary-white-color);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero {
+    min-height: 600px;
+    max-width: 1600px;
+    padding: 200px 0;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../image/desktop/hero/heroImg_1200.jpg),
+      linear-gradient(#c4c4c4, #c4c4c4);
+
+    @include bg_image_for_2x("../../../image/desktop/hero/heroImg_1200@2x.jpg");
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    max-width: 768px;
+    height: 400px;
+    text-align: center;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../image/tablet/hero/heroImg_768.jpg),
+      linear-gradient(#c4c4c4, #c4c4c4);
+
+    @include bg_image_for_2x('../../../image/tablet/hero/heroImg_768@2x.jpg');
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    max-width: 480px;
+    height: 400px;
+    text-align: center;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../image/mobile/hero/heroImg_480.jpg),
+      linear-gradient(#c4c4c4, #c4c4c4);
+
+    @include bg_image_for_2x("../../../image/mobile/hero/heroImg_480@2x.jpg");
+  }
+}
+
