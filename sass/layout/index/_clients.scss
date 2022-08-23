@@ -1,25 +1,28 @@
+@import "../../base/mixins";
+
 .client-list {
   display: flex;
-  margin-right: calc(-1 * var(--standard-clearance));
+  flex-wrap: wrap;
+  @include list-wrapper(var(--standard-clearance));
+  justify-content: center;
 
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: var(--standard-clearance);
 
-    width: 170px;
-    height: 92px;
+    padding: 16px 0;
 
     border: 1px solid var(--primary-svg-color);
     border-radius: 4px;
-    fill: var(--primary-svg-color);
 
     transition: fill var(--transition-duration-and-funk),
       border-color var(--transition-duration-and-funk);
 
     &:focus,
-    &:hover {
+    &:hover,
+    &:focus .client-list__icon,
+    &:hover .client-list__icon {
       fill: var(--accent-color);
       border-color: var(--accent-color);
     }
@@ -27,5 +30,35 @@
   &__icon {
     width: 106px;
     height: 60px;
+
+    fill: var(--primary-svg-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    @include items_in_row_for_flex(
+      3,
+      var(--standard-clearance),
+      var(--standard-clearance)
+    );
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__item {
+    @include items_in_row_for_flex(
+      6,
+      var(--standard-clearance),
+      var(--standard-clearance)
+    );
+  }
+}
+@media screen and (max-width: 767px) {
+  .client-list__item {
+    @include items_in_row_for_flex(
+      2,
+      var(--standard-clearance),
+      var(--standard-clearance)
+    );
   }
 }
