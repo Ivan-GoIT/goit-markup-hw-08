@@ -68,6 +68,7 @@
     width: var(--diametr);
     height: var(--diametr);
 
+    margin-right: 10px;
     fill: var(--primary-svg-color);
     transition: background-color var(--transition-duration-and-funk),
       fill var(--transition-duration-and-funk);
@@ -87,7 +88,7 @@
 
 @media screen and (min-width: 768px) {
   .team-list {
-    @include list-wrapper(var(--standard-clearance));
+  @include list-wrapper(var(--standard-clearance),var(--standard-clearance));
 
     &__item {
       @include items_in_row_for_flex(

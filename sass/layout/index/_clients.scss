@@ -3,7 +3,7 @@
 .client-list {
   display: flex;
   flex-wrap: wrap;
-  @include list-wrapper(var(--standard-clearance));
+  @include list-wrapper(var(--standard-clearance),var(--standard-clearance));
   justify-content: center;
 
   &__item {

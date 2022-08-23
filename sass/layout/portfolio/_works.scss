@@ -1,15 +1,7 @@
 @import "../../base/mixins";
 
 .work-list {
-  @include list-wrapper(var(--standard-clearance));
-
-  & .item {
-    @include items_in_row_for_flex(
-      3,
-      var(--standard-clearance),
-      var(--standard-clearance)
-    );
-  }
+  @include list-wrapper(var(--standard-clearance), var(--standard-clearance));
 
   & .title {
     margin-bottom: 4px;
@@ -26,6 +18,18 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .work-list {
+    justify-content: center;
+    &__item {
+      @include items_in_row_for_flex(
+        1,var(--standard-clearance),
+        var(--standard-clearance)
+      );
+    }
+  }
+}
+
 .work-description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
@@ -39,8 +43,6 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  
-  
 }
 
 .work-img-thumb {
@@ -53,7 +55,7 @@
   }
 }
 
-.overlay{
+.overlay {
   position: absolute;
 
   display: flex;

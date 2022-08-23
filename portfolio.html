@@ -19,7 +19,7 @@
   </head>
   <body class="portfolio">
     <header class="header">
-      <div class="container">
+      <div class="container page-header-container">
         <nav class="site-nav">
           <a
             lang="en"
@@ -29,18 +29,34 @@
             <span class="logo_color">Web</span>Studio
           </a>
 
-          <ul class="nav-list list_zeroing">
-            <li class="nav-list__item ">
-              <a href="./index.html" class="link_zeroing">Студия</a>
+          <ul class="site-nav-list list_zeroing">
+            <li class="site-nav-list__item">
+              <a href="./index.html" class="site-nav-list__anchor link_zeroing"
+                >Студия</a
+              >
             </li>
-            <li class="nav-list__item nav-list__item_flag">
-              <a href="./portfolio.html" class="link_zeroing">Портфолио</a>
+            <li class="site-nav-list__item site-nav-list__item_flag">
+              <a
+                href="./portfolio.html"
+                class="site-nav-list__anchor link_zeroing"
+                >Портфолио</a
+              >
             </li>
-            <li class="nav-list__item">
-              <a href="#address" class="link_zeroing">Контакты</a>
+            <li class="site-nav-list__item ">
+              <a href="#address" class="site-nav-list__anchor link_zeroing"
+                >Контакты</a
+              >
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use
+              class="mobile-menu-open__icon"
+              href="./image/svg/sprite.svg#burger-icon"
+            ></use>
+          </svg>
+        </button>
         <ul class="contacts-list list_zeroing">
           <li class="contacts-list__item">
             <a
@@ -48,7 +64,7 @@
               href="mailto:info@devstudio.com"
               class="contacts-list__contact link_zeroing"
             >
-              <svg class="contacts-list__icon" width="16" height="12">
+              <svg class="contacts-list__icon">
                 <use href="./image/svg/sprite.svg#mail"></use>
               </svg>
               info@devstudio.com
@@ -59,13 +75,96 @@
               href="tel:+380961111111"
               class="contacts-list__contact link_zeroing"
             >
-              <svg class="contacts-list__icon" width="10" height="16">
+              <svg class="contacts-list__icon">
                 <use href="./image/svg/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg width="19" height="19">
+              <use href="./image/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav-list list_zeroing">
+            <li class="mobile-nav-list__item">
+              <a
+                href="./index.html"
+                class="mobile-nav-list__anchor link_zeroing"
+              >
+                Студия
+              </a>
+            </li>
+            <li class="mobile-nav-list__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-nav-list__anchor link_zeroing"
+              >
+                Портфолио
+              </a>
+            </li>
+            <li class="mobile-nav-list__item">
+              <a href="#address" class="mobile-nav-list__anchor link_zeroing">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <div>
+            <ul class="mobile-contacts-list list_zeroing">
+              <li class="mobile-contacts-list__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-contacts-list__contact link_zeroing"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mobile-contacts-list__item">
+                <a
+                  lang="en"
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contacts-list__contact link_zeroing"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-social-list list_zeroing">
+              <li class="mobile-social-list__item">
+                <a
+                  class="mobile-social-list__anchor link_zeroing"
+                  href="https://instagram.com"
+                  >Instagram
+                </a>
+              </li>
+              <li class="mobile-social-list__item">
+                <a
+                  class="mobile-social-list__anchor link_zeroing"
+                  href="https://twitter.com"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-social-list__item">
+                <a
+                  class="mobile-social-list__anchor link_zeroing"
+                  href="https://www.facebook.com/"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-social-list__item">
+                <a
+                  class="mobile-social-list__anchor link_zeroing"
+                  href="https://www.linkedin.com/"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -94,11 +193,11 @@
           <!-- Works -->
           <h2 class="hidden-title">Работы</h2>
           <ul class="work-list list_zeroing">
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/web_site/img1.jpg"
+                    src="./image/desktop/portfolio/web_site/img1_1200.jpg"
                     alt="Технокряк"
                   />
                   <p class="overlay">
@@ -113,11 +212,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/design/img1.jpg"
+                    src="./image/desktop/portfolio/design/img1_1200.jpg"
                     alt="Постер New Orlean vs Golden Star"
                   />
                   <p class="overlay">
@@ -134,11 +233,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/application/img1.jpg"
+                    src="./image/desktop/portfolio/application/img1_1200.jpg"
                     alt="Ресторан Seafood"
                   />
                   <p class="overlay">
@@ -153,11 +252,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/marketing/img1.jpg"
+                    src="./image/desktop/portfolio/marketing/img1_1200.jpg"
                     alt="Проект Prime"
                   />
                   <p class="overlay">
@@ -172,11 +271,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/application/img2.jpg"
+                    src="./image/desktop/portfolio/application/img2_1200.jpg"
                     alt="Проект Boxes"
                   />
                   <p class="overlay">
@@ -191,11 +290,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/web_site/img2.jpg"
+                    src="./image/desktop/portfolio/web_site/img2_1200.jpg"
                     alt="Inspiration has no Borders"
                   />
                   <p class="overlay">
@@ -210,11 +309,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__itemm">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/design/img2.jpg"
+                    src="./image/desktop/portfolio/design/img2_1200.jpg"
                     alt="Технокряк"
                   />
                   <p class="overlay">
@@ -231,11 +330,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/marketing/img2.jpg"
+                    src="./image/desktop/portfolio/marketing/img2_1200.jpg"
                     alt="Проект LAB"
                   />
                   <p class="overlay">
@@ -250,11 +349,11 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="work-list__item">
               <div class="work-card">
                 <div class="work-img-thumb">
                   <img
-                    src="./image/portfolio/application/img3.jpg"
+                    src="./image/desktop/portfolio/application/img3_1200.jpg"
                     alt="Growing Business"
                   />
                   <p class="overlay">
@@ -275,9 +374,9 @@
     </main>
 <!-- Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container container">
         <div>
-          <a lang="en" href="./index.html" class="footer-logo logo link_zeroing">
+          <a lang="en" href="./index.html" class="footer__logo logo link_zeroing">
             <span class="logo_color">Web</span>Studio
           </a>
           <address id="address" class="address">

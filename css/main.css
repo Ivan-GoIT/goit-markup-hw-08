@@ -440,17 +440,15 @@ body {
   }
 }
 .footer {
-  padding: 60px 0;
   background-color: #2f303a;
   color: var(--primary-white-color);
 }
-.footer > .container {
-  display: flex;
+.footer-container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.footer > .container > div:first-child {
-  margin-right: 70px;
-}
-.footer-logo {
+.footer__logo {
   color: inherit;
   padding: 0;
   margin-bottom: 20px;
@@ -459,7 +457,7 @@ body {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 1.1428571429;
   text-transform: uppercase;
 }
 
@@ -467,17 +465,18 @@ body {
   display: flex;
   flex-direction: column;
   font-style: normal;
-  line-height: 1.71;
+  line-height: 1.7142857143;
+  margin-bottom: 60px;
 }
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .address__contact {
   color: rgba(255, 255, 255, 0.6);
 }
 
 .social-links-position {
-  margin-right: 93px;
+  margin-bottom: 60px;
 }
 
 .social-link-list__item.social-link-list__item_futer-colors {
@@ -485,15 +484,12 @@ body {
   fill: var(--primary-white-color);
 }
 
-/*Futer Mailing form */
-.mailing-form {
-  display: flex;
-}
 .mailing-form__input {
-  min-width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   margin-right: 12px;
+  margin-bottom: 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -510,6 +506,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 30px;
+  margin: 0 auto;
 }
 .mailing-form__submit-icon {
   height: 24px;
@@ -518,6 +515,48 @@ body {
   fill: var(--primary-white-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+  }
+  .footer-container > div:first-child {
+    margin-right: 70px;
+  }
+  .address {
+    margin: 0;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .social-links-position {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+  .social-link-list__item.social-link-list__item_futer-colors {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--primary-white-color);
+  }
+  .mailing-form {
+    display: flex;
+  }
+  .mailing-form__input {
+    min-width: 358px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .mailing-form {
+    width: 768px;
+  }
+  .mailing-form__input {
+    width: 450px;
+  }
+}
 .section.hero {
   padding: 0;
 }
@@ -736,6 +775,7 @@ body {
   border-radius: 50%;
   width: var(--diametr);
   height: var(--diametr);
+  margin-right: 10px;
   fill: var(--primary-svg-color);
   transition: background-color var(--transition-duration-and-funk), fill var(--transition-duration-and-funk);
 }
@@ -752,7 +792,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--standard-clearance));
-    margin-bottom: 0;
+    margin-bottom: calc(-1 * var(--standard-clearance));
   }
   .team-list__item {
     flex-basis: calc(50% - var(--standard-clearance));
@@ -776,7 +816,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-right: calc(-1 * var(--standard-clearance));
-  margin-bottom: 0;
+  margin-bottom: calc(-1 * var(--standard-clearance));
   justify-content: center;
 }
 .client-list__item {
@@ -825,7 +865,6 @@ body {
 
 .filter-list {
   display: flex;
-  justify-content: center;
   margin-bottom: 50px;
 }
 .filter-list > .item:not(:last-child) {
@@ -849,16 +888,21 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (max-width: 767px) {
+  .filter-list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+  }
+}
 .work-list {
   display: flex;
   flex-wrap: wrap;
   margin-right: calc(-1 * var(--standard-clearance));
-  margin-bottom: 0;
-}
-.work-list .item {
-  flex-basis: calc(33.3333333333% - var(--standard-clearance));
-  margin-right: var(--standard-clearance);
-  margin-bottom: var(--standard-clearance);
+  margin-bottom: calc(-1 * var(--standard-clearance));
 }
 .work-list .title {
   margin-bottom: 4px;
@@ -872,6 +916,16 @@ body {
   line-height: 1.88;
 }
 
+@media screen and (max-width: 767px) {
+  .work-list {
+    justify-content: center;
+  }
+  .work-list__item {
+    flex-basis: calc(100% - var(--standard-clearance));
+    margin-right: var(--standard-clearance);
+    margin-bottom: var(--standard-clearance);
+  }
+}
 .work-description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
