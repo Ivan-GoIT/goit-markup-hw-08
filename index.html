@@ -181,8 +181,8 @@
         <!-- </div> -->
       </section>
 
-      <!-- Особенности -->
-      <!-- <section class="section">
+      <!-- Features -->
+      <section class="section">
         <div class="container">
           <h2 class="hidden-title">Особенности</h2>
 
@@ -248,17 +248,21 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!--Skills -->
-      <!-- <section class="section skills">
+      <section class="section skills">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="skill-list list_zeroing">
             <li class="skill-list__item">
               <div class="skill-list__box">
                 <img
-                  src="./image/skills/box1.jpg"
+                  srcset="
+                    ./image/desktop/skills/box1_1200.jpg    1x,
+                    ./image/desktop/skills/box1_1200@2x.jpg 2x
+                  "
+                  src="./image/desktop/skills/box1_1200.jpg"
                   alt="Десктопные приложения"
                   class="skill-list__image-box"
                 />
@@ -270,7 +274,11 @@
             <li class="skill-list__item">
               <div class="skill-list__box">
                 <img
-                  src="./image/skills/box2.jpg"
+                  srcset="
+                    ./image/desktop/skills/box2_1200.jpg    1x,
+                    ./image/desktop/skills/box2_1200@2x.jpg 2x
+                  "
+                  src="./image/desktop/skills/box2_1200.jpg"
                   alt="Мобильные приложенияй"
                   class="skill-list__image-box"
                 />
@@ -282,7 +290,11 @@
             <li class="skill-list__item">
               <div class="skill-list__box">
                 <img
-                  src="./image/skills/box3.jpg"
+                  srcset="
+                    ./image/desktop/skills/box3_1200.jpg    1x,
+                    ./image/desktop/skills/box3_1200@2x.jpg 2x
+                  "
+                  src="./image/desktop/skills/box3_1200.jpg"
                   alt="Дизайнерские решения"
                   class="skill-list__image-box"
                 />
@@ -293,7 +305,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Team -->
       <!-- <section class="section team">
@@ -629,97 +641,97 @@
 
     <!-- Modal  -->
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
-          <button type="button" class="modal-close-button" data-modal-close>
-            <svg width="11" height="11">
-              <use href="./image/svg/sprite.svg#cross"></use>
-            </svg>
-          </button>
+      <div class="modal">
+        <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+        <button type="button" class="modal-close-button" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./image/svg/sprite.svg#cross"></use>
+          </svg>
+        </button>
 
-          <form class="service-order-form">
-            <label class="service-order-form__field">
-              <span class="service-order-form__description">Имя</span>
-              <span class="input-wrapper">
-                <input
-                  type="text"
-                  name="user_name"
-                  class="service-order-form__input"
-                  required
-                  pattern="[a-zA-Zа-яА-Я]+"
-                  minlength="2"
-                />
-                <span>
-                  <svg class="input-icon">
-                    <use href="./image/svg/sprite.svg#icon-user"></use>
-                  </svg>
-                </span>
+        <form class="service-order-form">
+          <label class="service-order-form__field">
+            <span class="service-order-form__description">Имя</span>
+            <span class="input-wrapper">
+              <input
+                type="text"
+                name="user_name"
+                class="service-order-form__input"
+                required
+                pattern="[a-zA-Zа-яА-Я]+"
+                minlength="2"
+              />
+              <span>
+                <svg class="input-icon">
+                  <use href="./image/svg/sprite.svg#icon-user"></use>
+                </svg>
               </span>
-            </label>
+            </span>
+          </label>
 
-            <label class="service-order-form__field">
-              <span class="service-order-form__description">Телефон</span>
-              <span class="input-wrapper">
-                <input
-                  type="tel"
-                  name="user_tel"
-                  class="service-order-form__input"
-                  required
-                  pattern="\d{3}-\d{3}-\d{2}-\d{2}"
-                  title="XXX-XXX-XX-XX"
-                />
-                <span>
-                  <svg class="input-icon">
-                    <use href="./image/svg/sprite.svg#icon-phone"></use>
-                  </svg>
-                </span>
+          <label class="service-order-form__field">
+            <span class="service-order-form__description">Телефон</span>
+            <span class="input-wrapper">
+              <input
+                type="tel"
+                name="user_tel"
+                class="service-order-form__input"
+                required
+                pattern="\d{3}-\d{3}-\d{2}-\d{2}"
+                title="XXX-XXX-XX-XX"
+              />
+              <span>
+                <svg class="input-icon">
+                  <use href="./image/svg/sprite.svg#icon-phone"></use>
+                </svg>
               </span>
-            </label>
+            </span>
+          </label>
 
-            <label class="service-order-form__field">
-              <span class="service-order-form__description">Почта</span>
-              <span class="input-wrapper">
-                <input
-                  type="email"
-                  name="user_email"
-                  class="service-order-form__input"
-                  required
-                />
-                <span>
-                  <svg class="input-icon">
-                    <use href="./image/svg/sprite.svg#icon-email"></use>
-                  </svg>
-                </span>
+          <label class="service-order-form__field">
+            <span class="service-order-form__description">Почта</span>
+            <span class="input-wrapper">
+              <input
+                type="email"
+                name="user_email"
+                class="service-order-form__input"
+                required
+              />
+              <span>
+                <svg class="input-icon">
+                  <use href="./image/svg/sprite.svg#icon-email"></use>
+                </svg>
               </span>
-            </label>
+            </span>
+          </label>
 
-            <label class="service-order-form__field">
-              <span class="service-order-form__description">Комментарий</span>
-              <textarea
-                name="user_message"
-                class="field-message"
-                placeholder="Введите текст"
-              ></textarea>
-            </label>
+          <label class="service-order-form__field">
+            <span class="service-order-form__description">Комментарий</span>
+            <textarea
+              name="user_message"
+              class="field-message"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
 
-            <input
-              id="terms_of_agreement"
-              type="checkbox"
-              class="form-check hidden-title"
-              name="terms_of_agreement"
-            />
+          <input
+            id="terms_of_agreement"
+            type="checkbox"
+            class="form-check hidden-title"
+            name="terms_of_agreement"
+          />
 
-            <label for="terms_of_agreement" class="check-deskription">
-              Соглашаюсь с рассылкой и принимаю&nbsp;<a
-                class="terms_of_agreement-link"
-                href="#"
-                >Условия договора</a
-              >
-            </label>
+          <label for="terms_of_agreement" class="check-deskription">
+            Соглашаюсь с рассылкой и принимаю&nbsp;<a
+              class="terms_of_agreement-link"
+              href="#"
+              >Условия договора</a
+            >
+          </label>
 
-            <button type="submit" class="button form-submit">Отправить</button>
-          </form>
-        </div>
+          <button type="submit" class="button form-submit">Отправить</button>
+        </form>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
