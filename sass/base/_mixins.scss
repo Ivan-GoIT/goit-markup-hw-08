@@ -1,13 +1,13 @@
-@mixin list_wrapper($margin-right:0,$margin-bottom:0) {
+@mixin list_wrapper($margin-left:0,$margin-bottom:0) {
       display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * $margin-right);
+  margin-left: calc(-1 * $margin-left);
   margin-bottom: calc(-1 * $margin-bottom);
 };
 
-@mixin items_in_row_for_flex($items_in_row:1,$margin-right:0,$margin-bottom:0) {
+@mixin items_in_row_for_flex($items_in_row:1,$margin-left:0,$margin-bottom:0) {
       flex-basis: calc(100% / $items_in_row - var(--standard-clearance));
-  margin-right: $margin-right;
+  margin-left: $margin-left;
   margin-bottom: $margin-bottom;
 };
 

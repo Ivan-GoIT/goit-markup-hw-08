@@ -1,4 +1,4 @@
-@import "base/mixins";
+@import "../../base/mixins";
 
 .work-list {
   @include list-wrapper(var(--standard-clearance), var(--standard-clearance));

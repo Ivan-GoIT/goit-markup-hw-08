@@ -1,4 +1,4 @@
-@import "base/mixins";
+@import "../../base/mixins";
 
 .section.hero {
   padding: 0;
@@ -27,8 +27,6 @@
   &__title {
     margin-bottom: var(--standard-clearance);
     font-weight: 900;
-    font-size: 26px;
-    line-height: calc(42 / 26);
 
     text-align: center;
     letter-spacing: 0.06em;
@@ -52,6 +50,10 @@
       linear-gradient(#c4c4c4, #c4c4c4);
 
     @include bg_image_for_2x("../image/desktop/hero/heroImg_1200@2x.jpg");
+    &__title {
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
   }
 }
 
@@ -90,5 +92,10 @@
       linear-gradient(#c4c4c4, #c4c4c4);
 
     @include bg_image_for_2x("../image/mobile/hero/heroImg_480@2x.jpg");
+
+    &__title {
+      font-size: 26px;
+      line-height: calc(42 / 26);
+    }
   }
 }

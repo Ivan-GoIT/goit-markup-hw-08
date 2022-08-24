@@ -2,7 +2,7 @@
   display: flex;
   margin-bottom: 50px;
 
-  & > .item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 8px;
   }
 
@@ -38,6 +38,9 @@
 @media screen and (max-width: 767px) {
   .filter-list {
     flex-wrap: wrap;
+    &__item{
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -45,4 +48,11 @@
   .filter-list {
     justify-content: center;
   }
+}
+
+@media screen and (max-width:1199px) {
+    .filter-list {
+   margin-bottom: 30px;
+  }
+
 }

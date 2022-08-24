@@ -1,4 +1,4 @@
-@import "base/mixins";
+@import "../../base/mixins";
 
 .features-list {
   &__image-box {
@@ -33,14 +33,19 @@
 }
 
 @media screen and (max-width: 767px) {
-  .features-list__item:not(:last-child) {
-    margin-bottom: var(--standard-clearance);
+  .features-list{
+    &__title{
+      text-align: center;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: var(--standard-clearance);
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .features-list {
-    @include list_wrapper(var(--standard-clearance));
+    @include list_wrapper(var(--standard-clearance), var(--standard-clearance));
     &__item {
       @include items_in_row_for_flex(2, var(--standard-clearance));
     }
