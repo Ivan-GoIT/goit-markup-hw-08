@@ -916,10 +916,7 @@ body {
   line-height: 1.88;
 }
 
-@media screen and (max-width: 767px) {
-  .work-list {
-    justify-content: center;
-  }
+@media screen and (max-width: 1199px) {
   .work-list__item {
     flex-basis: calc(100% - var(--standard-clearance));
     margin-right: var(--standard-clearance);
@@ -945,7 +942,7 @@ body {
 }
 .work-img-thumb > img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 .overlay {
