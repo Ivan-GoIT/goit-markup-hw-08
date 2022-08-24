@@ -1,4 +1,4 @@
-@import "../../base/mixins";
+@import "base/mixins";
 
 .features-list {
   &__image-box {
@@ -48,6 +48,6 @@
 }
 @media screen and (min-width: 1200px) {
   .features-list__item {
-      @include items_in_row_for_flex(4, var(--standard-clearance));
-    }
+    @include items_in_row_for_flex(4, var(--standard-clearance));
   }
+}

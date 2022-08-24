@@ -1,4 +1,4 @@
-@import "../../base/mixins";
+@import "base/mixins";
 
 .work-list {
   @include list-wrapper(var(--standard-clearance), var(--standard-clearance));
@@ -22,7 +22,8 @@
   .work-list {
     &__item {
       @include items_in_row_for_flex(
-        2,var(--standard-clearance),
+        2,
+        var(--standard-clearance),
         var(--standard-clearance)
       );
     }
@@ -33,27 +34,25 @@
   .work-list {
     &__item {
       @include items_in_row_for_flex(
-        1,var(--standard-clearance),
+        1,
+        var(--standard-clearance),
         var(--standard-clearance)
       );
     }
   }
 }
-
 
 @media screen and (min-width: 1200px) {
   .work-list {
     &__item {
       @include items_in_row_for_flex(
-        3,var(--standard-clearance),
+        3,
+        var(--standard-clearance),
         var(--standard-clearance)
       );
     }
   }
 }
-
-
-
 
 .work-description {
   padding: 20px 24px;

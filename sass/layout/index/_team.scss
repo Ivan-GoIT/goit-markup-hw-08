@@ -1,4 +1,4 @@
-@import "../../base/mixins";
+@import "base/mixins";
 
 .team {
   background: #f5f4fa;
@@ -88,7 +88,7 @@
 
 @media screen and (min-width: 768px) {
   .team-list {
-  @include list-wrapper(var(--standard-clearance),var(--standard-clearance));
+    @include list-wrapper(var(--standard-clearance), var(--standard-clearance));
 
     &__item {
       @include items_in_row_for_flex(
