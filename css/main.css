@@ -918,7 +918,21 @@ body {
 
 @media screen and (max-width: 1199px) {
   .work-list__item {
+    flex-basis: calc(50% - var(--standard-clearance));
+    margin-right: var(--standard-clearance);
+    margin-bottom: var(--standard-clearance);
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-list__item {
     flex-basis: calc(100% - var(--standard-clearance));
+    margin-right: var(--standard-clearance);
+    margin-bottom: var(--standard-clearance);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work-list__item {
+    flex-basis: calc(33.3333333333% - var(--standard-clearance));
     margin-right: var(--standard-clearance);
     margin-bottom: var(--standard-clearance);
   }

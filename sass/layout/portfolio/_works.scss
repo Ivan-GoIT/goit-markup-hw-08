@@ -18,12 +18,18 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .work-list {
+    &__item {
+      @include items_in_row_for_flex(
+        2,var(--standard-clearance),
+        var(--standard-clearance)
+      );
+    }
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .work-list {
     &__item {
       @include items_in_row_for_flex(
@@ -33,6 +39,20 @@
     }
   }
 }
+
+
+@media screen and (min-width: 1200px) {
+  .work-list {
+    &__item {
+      @include items_in_row_for_flex(
+        3,var(--standard-clearance),
+        var(--standard-clearance)
+      );
+    }
+  }
+}
+
+
 
 
 .work-description {
