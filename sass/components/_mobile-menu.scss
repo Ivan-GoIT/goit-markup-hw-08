@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
     top: -100%;
@@ -13,7 +13,7 @@
     visibility: hidden;
     pointer-events: none;
 
-    transition: top var(--transition-duration-and-funk), 
+    transition: top var(--transition-duration-and-funk),
       opacity var(--transition-duration-and-funk),
       visibility var(--transition-duration-and-funk),
       pointer-events var(--transition-duration-and-funk);
@@ -118,3 +118,8 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

@@ -144,7 +144,7 @@ body {
     padding: 24px 0 25px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
     top: -100%;
@@ -231,6 +231,11 @@ body {
     content: "";
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     margin-left: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
   }
 }
 .page-header-container,
