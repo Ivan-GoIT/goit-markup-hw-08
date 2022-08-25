@@ -59,6 +59,23 @@
   border: 1px solid #eeeeee;
 }
 
+@media screen and (min-width:480px) and( max-width:1199px) {
+  .work-list{
+    &__item{
+      display: flex;
+    }
+  }
+  .work{
+    &-card{
+display: flex;
+flex-direction: column;
+    }
+    &-description{
+      flex-grow: 2;
+    }
+  }
+}
+
 .work-card {
   cursor: pointer;
   transition: box-shadow var(--transition-duration-and-funk);
@@ -73,7 +90,7 @@
   position: relative;
   overflow: hidden;
 
-  & > img {
+  &  img {
     display: block;
     width: 100%;
   }

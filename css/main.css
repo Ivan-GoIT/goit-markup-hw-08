@@ -83,7 +83,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -964,6 +964,18 @@ body {
   border: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .work-list__item {
+    display: flex;
+  }
+  .work-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .work-description {
+    flex-grow: 2;
+  }
+}
 .work-card {
   cursor: pointer;
   transition: box-shadow var(--transition-duration-and-funk);
@@ -976,7 +988,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.work-img-thumb > img {
+.work-img-thumb img {
   display: block;
   width: 100%;
 }
